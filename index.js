@@ -20,6 +20,10 @@ const list = [
   'assets/media/media19.webp',
 ]
 
+const shuffleArray = (array) => {
+  return array.sort(() => Math.random() - 0.5)
+}
+
 const pos1 = document.querySelector('#carousel > div')
 const pos2 = document.querySelector('#carousel2 > div')
 const pos3 = document.querySelector('#carousel3 > div')
@@ -45,11 +49,12 @@ const createCarousel = (position, item, number) => {
       'row-cols-xl-6'
     )
     if (i < item) {
+      const shuffled = shuffleArray(list)
       for (let n = 1; n <= number; n++) {
         const divCol = document.createElement('div')
         divCol.classList.add('col')
         divCol.innerHTML = `<img src="${
-          list[n + img]
+          shuffled[n + img]
         }" class="d-block w-100 zoom" alt="..." />`
         row.appendChild(divCol)
       }
