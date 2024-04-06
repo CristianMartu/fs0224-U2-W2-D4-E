@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix EditProfile</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="./assets/dist/css/style.min.css" />
+  </head>
+
+  <body id="bodyEdit" class="container bg-dark">
+    <header>
+      <a class="logo" href="index.html">
+        <img
+          src="./assets/img/netflix_logo.png"
+          width="112"
+          height="47"
+          alt="Netflix logo"
+          loading="lazy"
+        />
+      </a>
+    </header>
+    <div class="container edit-profile stretch text-white pt-4">
+      <h3>Edit Profile</h3>
+      <hr />
+      <div class="account-info">
+        <div class="account-avatar position-relative">
+          <span
+            id="badge"
+            class="badge position-absolute z-2 rounded-circle bg-black"
+            ><i class="bi bi-pencil"></i
+          ></span>
+          <img
+            src="https://bookface-images.s3.amazonaws.com/small_logos/28b22a54c96662989843912cfceff789a6bae093.png"
+            alt=""
+          />
+        </div>
+        <div class="account-Choices">
+          <h4 class="user-name">Strive Student</h4>
+          <label for="language"><h5>Language:</h5></label>
+
+          <select id="language">
+            <option value="English">Italian</option>
+            <option value="German">Spanish</option>
+            <option value="Spanish">French</option>
+            <option value="Italian">Russian</option>
+            <option value="Italian">Chinese</option>
+          </select>
+          <hr />
+          <h5>Maturity Settings:</h5>
+          <h5 class="btn btn-secondary pt-2 fw-bold">ALL MATURY RATINGS</h5>
+          <p>Show titles of all maturity ratings for this profile.</p>
+          <button type="button" class="btn btn-outline-secondary rounded-0">
+            Edit
+          </button>
+          <hr />
+          <h5>Autoplay controls</h5>
+          <label class="checkboxBox">
+            <input type="checkbox" class="btn" checked="checked" />
+            Autoplay next episode in a series on all devices.
+          </label>
+          <label class="checkboxBox">
+            <input type="checkbox" checked="checked" />
+            Autoplay previews while browsing on all devices.
+          </label>
+        </div>
+      </div>
+      <hr />
+      <div class="buttons">
+        <button type="submit">Save</button>
+        <a href="./index.html" class="btn">Cancel</a>
+        <a href="./account.html" class="btn">Delete profile</a>
+      </div>
+    </div>
+  </body>
+</html>

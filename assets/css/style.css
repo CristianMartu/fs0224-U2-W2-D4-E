@@ -11959,4 +11959,194 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+}
+.dropdown-menu .dropdown-item {
+  color: white;
+  opacity: 0.6;
+  background-color: transparent;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  opacity: 0.8;
+  transition: color 0.3s;
+}
+
+.carousel-control-prev-icon {
+  margin-left: -170%;
+}
+
+.carousel-control-next {
+  width: 32px;
+}
+
+.carousel-control-prev {
+  width: 32px;
+}
+
+.carousel-control-next-icon {
+  margin-right: -170%;
+}
+
+.carousel-inner .zoom:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: transform 0.8s;
+}
+
+@media screen and (min-width: 576px) and (max-width: 1540px) {
+  .carousel-inner {
+    width: 1500px;
+  }
+}
+.secondNavbar {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+.secondNavbar h1, .secondNavbar .h1 {
+  font-weight: 600;
+}
+
+.secondoCarosello,
+.terzoCarosello {
+  margin-top: 1.5rem;
+}
+
+.container .carousel .zoom {
+  width: -moz-max-content;
+  width: max-content;
+}
+
+h2, .h2 {
+  font-size: 26px;
+  padding-bottom: 0.5rem;
+  color: white;
+  font-weight: 550;
+}
+
+footer {
+  margin-inline: auto;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+
+footer i {
+  size: 20px;
+}
+
+footer div {
+  margin-block: 0.5rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+  opacity: 0.3;
+}
+
+footer a:hover {
+  opacity: 1;
+}
+
+@media screen and (min-width: 767px) {
+  #bodyEdit,
+  #bodyEdit button,
+  #bodyEdit .buttons a {
+    font-size: 22px;
+  }
+  .account-info {
+    display: flex;
+    gap: 10%;
+  }
+}
+.stretch {
+  max-width: 700px;
+}
+
+.account-avatar {
+  width: 20%;
+}
+
+.account-Choices {
+  width: 80%;
+}
+
+.account-info select {
+  background-color: black;
+  color: white;
+  border: transparent;
+}
+
+.buttons {
+  display: flex;
+  gap: 5%;
+  font-size: 1rem;
+}
+
+.buttons button {
+  background-color: white;
+  color: #141414;
+  border: 1px solid;
+  font-weight: 600;
+  width: 25%;
+}
+
+.buttons button:hover {
+  transition: 1s;
+  background-color: rgb(128, 247, 128);
+}
+
+.buttons a {
+  color: white;
+  opacity: 0.4;
+  border: 1px solid;
+  font-weight: 600;
+  border-radius: 0;
+}
+
+.buttons a:nth-child(1) {
+  width: 25%;
+}
+
+.buttons a:nth-child(2) {
+  width: 40%;
+}
+
+.buttons a:nth-child(3):hover {
+  transition: 1s;
+  opacity: 1;
+  color: red;
+  border: 1px solid red;
+}
+
+.buttons a:nth-child(2):hover {
+  transition: 1s;
+  transition: 1s;
+  opacity: 1;
+  border: 1px solid;
+}
+
+#badge {
+  margin-top: 108px;
+  margin-left: 5px;
+  font-size: 20px;
+  padding: 5px;
+  border: 3px solid #fff;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.container-settings {
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+.size {
+  width: 80px;
+}
+
+.account a {
+  text-decoration: none;
+}
+
+.account h3, .account .h3 {
+  opacity: 0.6;
 }/*# sourceMappingURL=style.css.map */
