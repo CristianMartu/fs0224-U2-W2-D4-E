@@ -3,6 +3,7 @@ const list = [
   'assets/media/media1.jpg',
   'assets/media/media2.webp',
   'assets/media/media3.webp',
+  'assets/media/media4.jpg',
   'assets/media/media5.webp',
   'assets/media/media6.jpg',
   'assets/media/media7.webp',
@@ -18,11 +19,25 @@ const list = [
   'assets/media/media17.jpg',
   'assets/media/media18.jpg',
   'assets/media/media19.webp',
+  'assets/media/media20.jpg',
+  'assets/media/media21.webp',
+  'assets/media/media22.webp',
+  'assets/media/media23.webp',
+  'assets/media/media24.jpg',
+  'assets/media/media25.webp',
+  'assets/media/media26.webp',
+  'assets/media/media27.jpg',
+  'assets/media/media28.jpg',
+  'assets/media/media29.jpg',
+  'assets/media/media30.jpg',
+  'assets/media/media31.webp',
+  'assets/media/media32.jpg',
 ]
 
 const shuffleArray = (array) => {
   return array.sort(() => Math.random() - 0.5)
 }
+let shuffled = list
 
 const pos1 = document.querySelector('#carousel > div')
 const pos2 = document.querySelector('#carousel2 > div')
@@ -43,13 +58,11 @@ const createCarousel = (position, item, number) => {
     row.classList.add(
       'row',
       'row-cols-1',
-      'row-cols-sm-3',
-      'row-cols-md-4',
-      'row-cols-lg-5',
+      'row-cols-sm-2',
+      'row-cols-md-3',
       'row-cols-xl-6'
     )
     if (i < item) {
-      const shuffled = shuffleArray(list)
       for (let n = 1; n <= number; n++) {
         const divCol = document.createElement('div')
         divCol.classList.add('col')
@@ -62,11 +75,23 @@ const createCarousel = (position, item, number) => {
     carousel.appendChild(row)
     position.appendChild(carousel)
     img += number
+    // per evitare ripetizioni sulla schede principali senza complicare il codice,
+    // ho lasciato il primo carosello ordinato e mischiato solo gli altri due
+    // per diminuire le probabilità xD
+    shuffled = shuffleArray(list)
   }
 }
-createCarousel(pos1, 3, 6)
-createCarousel(pos2, 3, 6)
-createCarousel(pos3, 3, 6)
+// funzione che crea un carosello:
+// tre parametri: posizione di creazione, quantità di schede scorribili, e numero di immagini a scheda
+createCarousel(pos1, 5, 6)
+createCarousel(pos2, 5, 6)
+createCarousel(pos3, 5, 6)
+
+//           Da sistemare per rendere il comportamento responsive
+
+//  l'idea era di usare le media query per poi rimuovere e aggiungere ogni volta
+//  i caroselli con createCarousel(). Testata (a fondo pagina) manualmente funziona,
+//  però causa tempo ho dovuto abbandonare.
 
 // const handleMediaQueryChange = (media) => {
 //   if (media.matches) {
@@ -89,8 +114,10 @@ createCarousel(pos3, 3, 6)
 //     handleMediaQueryChange(mediaQuery)
 //   )
 // }
-// createCarousel(pos, 3, 6)
-// createCarousel(pos, 3, 5)
-// createCarousel(pos, 4, 4)
-// createCarousel(pos, 6, 3)
-// createCarousel(pos, 18, 1)
+
+//          creazione dei caroselli in base alla grandezza del layout
+// createCarousel(pos, 3, 6)    // 1200px
+// createCarousel(pos, 3, 5)    // 992px
+// createCarousel(pos, 4, 4)    // 768px
+// createCarousel(pos, 6, 3)    // 576px
+// createCarousel(pos, 18, 1)   // 200px
