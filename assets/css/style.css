@@ -11993,11 +11993,6 @@ textarea.form-control-lg {
   transition: transform 0.8s;
 }
 
-@media screen and (min-width: 576px) and (max-width: 1540px) {
-  .carousel-inner {
-    width: 1500px;
-  }
-}
 .secondNavbar {
   padding-top: 1rem;
   padding-bottom: 2rem;
