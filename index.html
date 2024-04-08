@@ -183,7 +183,7 @@
 
     <main class="container">
       <div class="secondNavbar">
-        <div class="d-flex align-items-center mt-3 mb-4">
+        <div class="d-flex align-items-center mt-3">
           <h1 class="text-white me-5 h3">TV Shows</h1>
           <div class="dropdown d-flex align-items-center">
             <button
@@ -235,10 +235,94 @@
           </div>
         </div>
       </div>
-
-      <div class="primocarosello">
-        <h2>Trending Now</h2>
-        <div id="carousel" class="carousel slide firstCarousel">
+      <h2>Trending Now</h2>
+      <div class="primocarosello d-none d-xl-block">
+        <div
+          id="carousel-xl"
+          class="carousel slide firstCarousel-xl"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner"></div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target=".firstCarousel-xl"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target=".firstCarousel-xl"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="primocarosello d-none d-md-block d-xl-none">
+        <div
+          id="carousel-md"
+          class="carousel slide firstCarousel-md"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner"></div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target=".firstCarousel-md"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target=".firstCarousel-md"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="primocarosello d-none d-sm-block d-md-none">
+        <div
+          id="carousel-sm"
+          class="carousel slide firstCarousel-sm"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner"></div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target=".firstCarousel-sm"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target=".firstCarousel-sm"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="primocarosello d-sm-none">
+        <div
+          id="carousel"
+          class="carousel slide firstCarousel"
+          data-bs-ride="carousel"
+        >
           <div class="carousel-inner"></div>
           <button
             class="carousel-control-prev"
@@ -261,9 +345,94 @@
         </div>
       </div>
 
-      <div class="secondoCarosello">
-        <h2>Watch it Again</h2>
-        <div id="carousel2" class="carousel slide secondCarousel">
+      <h2 class="mt-4">Watch it Again</h2>
+      <div class="secondoCarosello d-none d-xl-block">
+        <div
+          id="carousel2-xl"
+          class="carousel slide secondCarousel-xl"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner"></div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target=".secondCarousel-xl"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target=".secondCarousel-xl"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="secondoCarosello d-none d-md-block d-xl-none">
+        <div
+          id="carousel2-md"
+          class="carousel slide secondCarousel-md"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner"></div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target=".secondCarousel-md"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target=".secondCarousel-md"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="secondoCarosello d-none d-sm-block d-md-none">
+        <div
+          id="carousel2-sm"
+          class="carousel slide secondCarousel-sm"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner"></div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target=".secondCarousel-sm"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target=".secondCarousel-sm"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="secondoCarosello d-sm-none">
+        <div
+          id="carousel2"
+          class="carousel slide secondCarousel"
+          data-bs-ride="carousel"
+        >
           <div class="carousel-inner"></div>
           <button
             class="carousel-control-prev"
@@ -286,9 +455,94 @@
         </div>
       </div>
 
-      <div class="terzoCarosello">
-        <h2>New Releases</h2>
-        <div id="carousel3" class="carousel slide thirdCarousel">
+      <h2 class="mt-4">New Releases</h2>
+      <div class="terzoCarosello d-none d-xl-block">
+        <div
+          id="carousel3-xl"
+          class="carousel slide thirdCarousel-xl"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner"></div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target=".thirdCarousel-xl"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target=".thirdCarousel-xl"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="terzoCarosello d-none d-md-block d-xl-none">
+        <div
+          id="carousel3-md"
+          class="carousel slide thirdCarousel-md"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner"></div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target=".thirdCarousel-md"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target=".thirdCarousel-md"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="terzoCarosello d-none d-sm-block d-md-none">
+        <div
+          id="carousel3-sm"
+          class="carousel slide thirdCarousel-sm"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner"></div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target=".thirdCarousel-sm"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target=".thirdCarousel-sm"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="terzoCarosello d-sm-none">
+        <div
+          id="carousel3"
+          class="carousel slide thirdCarousel"
+          data-bs-ride="carousel"
+        >
           <div class="carousel-inner"></div>
           <button
             class="carousel-control-prev"
@@ -355,11 +609,11 @@
       </address>
     </footer>
 
+    <script src="index.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script src="index.js"></script>
   </body>
 </html>

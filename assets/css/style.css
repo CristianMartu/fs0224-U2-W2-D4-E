@@ -12001,11 +12001,6 @@ textarea.form-control-lg {
   font-weight: 600;
 }
 
-.secondoCarosello,
-.terzoCarosello {
-  margin-top: 1.5rem;
-}
-
 .container .carousel .zoom {
   width: -moz-max-content;
   width: max-content;

@@ -37,15 +37,27 @@ const list = [
 const shuffleArray = (array) => {
   return array.sort(() => Math.random() - 0.5)
 }
-let shuffled = list
+// const shuffled1 = shuffleArray([...list])
+const shuffled1 = [...list]
+const shuffled2 = shuffleArray([...shuffled1])
+const shuffled3 = shuffleArray([...shuffled2])
 
+const pos1XL = document.querySelector('#carousel-xl > div')
+const pos1MD = document.querySelector('#carousel-md > div')
+const pos1SM = document.querySelector('#carousel-sm > div')
 const pos1 = document.querySelector('#carousel > div')
+
+const pos2XL = document.querySelector('#carousel2-xl > div')
+const pos2MD = document.querySelector('#carousel2-md > div')
+const pos2SM = document.querySelector('#carousel2-sm > div')
 const pos2 = document.querySelector('#carousel2 > div')
+
+const pos3XL = document.querySelector('#carousel3-xl > div')
+const pos3MD = document.querySelector('#carousel3-md > div')
+const pos3SM = document.querySelector('#carousel3-sm > div')
 const pos3 = document.querySelector('#carousel3 > div')
 
-const carousel = document.createElement('div')
-
-const createCarousel = (position, item, number) => {
+const createCarousel = (position, item, imgForEachItem, list) => {
   let img = 0
   for (let i = 0; i < item; i++) {
     const carousel = document.createElement('div')
@@ -63,61 +75,33 @@ const createCarousel = (position, item, number) => {
       'row-cols-xl-6'
     )
     if (i < item) {
-      for (let n = 1; n <= number; n++) {
+      for (let n = 1; n <= imgForEachItem; n++) {
         const divCol = document.createElement('div')
         divCol.classList.add('col')
         divCol.innerHTML = `<img src="${
-          shuffled[n + img]
+          list[n + img]
         }" class="d-block w-100 zoom" alt="..." />`
         row.appendChild(divCol)
       }
     }
     carousel.appendChild(row)
     position.appendChild(carousel)
-    img += number
-    // per evitare ripetizioni sulla schede principali senza complicare il codice,
-    // ho lasciato il primo carosello ordinato e mischiato solo gli altri due
-    // per diminuire le probabilità xD
-    shuffled = shuffleArray(list)
+    img += imgForEachItem
   }
 }
 // funzione che crea un carosello:
-// tre parametri: posizione di creazione, quantità di schede scorribili, e numero di immagini a scheda
-createCarousel(pos1, 5, 6)
-createCarousel(pos2, 5, 6)
-createCarousel(pos3, 5, 6)
+// tre parametri: posizione di creazione, quantità di schede scorribili, numero di immagini a scheda e lista immagini
+createCarousel(pos1XL, 5, 6, shuffled1)
+createCarousel(pos1MD, 10, 3, shuffled1)
+createCarousel(pos1SM, 15, 2, shuffled1)
+createCarousel(pos1, 30, 1, shuffled1)
 
-//           Da sistemare per rendere il comportamento responsive
+createCarousel(pos2XL, 5, 6, shuffled2)
+createCarousel(pos2MD, 10, 3, shuffled2)
+createCarousel(pos2SM, 15, 2, shuffled2)
+createCarousel(pos2, 30, 1, shuffled2)
 
-//  l'idea era di usare le media query per poi rimuovere e aggiungere ogni volta
-//  i caroselli con createCarousel(). Testata (a fondo pagina) manualmente funziona,
-//  però causa tempo ho dovuto abbandonare.
-
-// const handleMediaQueryChange = (media) => {
-//   if (media.matches) {
-//     console.log(media)
-//   } else {
-//     console.log('La media query non è attiva:')
-//   }
-// }
-
-// const mediaQueries = [
-//   '(min-width: 200px)',
-//   '(min-width: 576px)',
-//   '(min-width: 768px)',
-//   '(min-width: 992px)',
-//   '(min-width: 1200px)',
-// ]
-// for (let i = 0; i < mediaQueries.length; i++) {
-//   const mediaQuery = window.matchMedia(mediaQueries[i])
-//   mediaQuery.addEventListener('change', () =>
-//     handleMediaQueryChange(mediaQuery)
-//   )
-// }
-
-//          creazione dei caroselli in base alla grandezza del layout
-// createCarousel(pos, 3, 6)    // 1200px
-// createCarousel(pos, 3, 5)    // 992px
-// createCarousel(pos, 4, 4)    // 768px
-// createCarousel(pos, 6, 3)    // 576px
-// createCarousel(pos, 18, 1)   // 200px
+createCarousel(pos3XL, 5, 6, shuffled3)
+createCarousel(pos3MD, 10, 3, shuffled3)
+createCarousel(pos3SM, 15, 2, shuffled3)
+createCarousel(pos3, 30, 1, shuffled3)
